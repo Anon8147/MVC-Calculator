@@ -9,10 +9,19 @@ public class CalculatorController {
 	private CalculatorView mView;
 
 	/*
-	 * First we create the Controller.
-	 * Inside the constructor, we say that "this" controller object contains Model and View objects.
-	 * We also ensure that the View 
-	 *
+	 * First we create the Controller. Inside the Controller's constructor, we
+	 * say that "this" controller object contains Model and View objects.
+	 * 
+	 * We ensure that the Controller is "connected" to the View by
+	 * ActionListeners (via the "actionPeformed() method implemented by the "
+	 * CalculateClicked" & "LookAtMe" objects) via the View's "addListener()"
+	 * method.
+	 * 
+	 * So now, every time the "calculate" push button is clicked in the GUI, the
+	 * "CalculateClicked()" & "LookAtMe()" methods will be invoked. As it
+	 * happens, in this example "LookATMe()" will be invoked twice, just to
+	 * illustrate that multiple ActionListeners can be invoked and that the same
+	 * one can be invoked multiple times.
 	 */
 	public CalculatorController(CalculatorModel model, CalculatorView view) {
 		mModel = model;

@@ -58,13 +58,13 @@ public class CalculatorView extends JFrame {
 	}
 
 	/*
-	 * This is needed because we want to be notified when certain actions occur
-	 * in the view. In this case, a listener is added to the "calculateButton"
-	 * every time this method is invoked. BTW: there's nothing preventing more
-	 * than one action being added to this "calculateButton". There's no control
-	 * over the number of times this method is invoked.
-	 *
-	 * So read this as.... Add a listener to the calculateButton.
+	 * This "addListener()" method is needed because we want to be notified when
+	 * certain actions occur on this widget (an instance of JButton called
+	 * "calculateButton").
+	 * 
+	 * BTW: there's nothing preventing more than one action being added to this
+	 * "calculateButton". There's no control here over the number of times this
+	 * method is invoked.
 	 */
 	void addListener(ActionListener myListener) {
 		calculateButton.addActionListener(myListener);
